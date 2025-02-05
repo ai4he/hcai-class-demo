@@ -120,9 +120,13 @@
       }
 
       // Construct the URL with the query parameter using GET method
-      const endpoint = "https://hook.us2.make.com/xk7kvwcvati8fd3r2pamdb30gkxjsr1m";
+      const endpoint = "https://hook.us2.make.com/xk7kvwcvati8fd3r2pamdb30gkxjsr1m"; // make.com
+      // const endpoint = "https://8f20-205-186-62-252.ngrok-free.app/webhook/cloud-model"; // n8n
+      // const endpoint = "https://8f20-205-186-62-252.ngrok-free.app/webhook/local-model"; // n8n
+      // const endpoint = "https://8f20-205-186-62-252.ngrok-free.app/palmetto-text"; // palmetto jupyter notebook cell
+      
       const url = `${endpoint}?prompt=${encodeURIComponent(userInput)}`;
-
+      
       // Display a loading message
       document.getElementById("result").innerHTML = "<p>Loading recommendations...</p>";
 
