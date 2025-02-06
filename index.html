@@ -131,7 +131,12 @@
       document.getElementById("result").innerHTML = "<p>Loading recommendations...</p>";
 
       // Call the endpoint using fetch with GET method
-      fetch(url)
+      fetch(url, {
+        method: "GET",
+        headers: {
+          "ngrok-skip-browser-warning": "true"
+        }
+      })
         .then(response => response.text())
         .then(data => {
           // Render the returned HTML in the result div
