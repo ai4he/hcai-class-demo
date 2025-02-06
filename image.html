@@ -134,6 +134,9 @@
       // POST the FormData along with the querystring parameter
       fetch(url, {
         method: "POST",
+        headers: {
+          "ngrok-skip-browser-warning": "true"
+        },
         body: formData
       })
       .then(response => response.text())
